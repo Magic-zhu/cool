@@ -1,0 +1,89 @@
+@import "../style/global.less";
+.xly-button {
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 16px;
+  gap: 8px;
+  color: @darkText;
+  background-color: @headerBg;
+  &:hover {
+    background-color: @pageBg;
+  }
+  &:active {
+    background-color: @divide;
+  }
+  &:disabled {
+    color:@disableText;
+  }
+}
+.xly-button--primary {
+  color: @white;
+  background-color: @primary6;
+
+  &:hover {
+    background-color: @primary5;
+  }
+
+  &:active {
+    background-color: @primary7;
+  }
+
+  &:disabled {
+    background-color: @primary2;
+  }
+
+}
+.xly-button--success {
+  color: @white;
+  background-color: @success6;
+
+  &:hover {
+    background-color: @success5;
+  }
+
+  &:active {
+    background-color: @success7;
+  }
+
+  &:disabled {
+    background-color: @success2;
+  }
+
+}
+.xly-button--danger {
+  color: @white;
+  background-color: @danger6;
+
+  &:hover {
+    background-color: @danger5;
+  }
+
+  &:active {
+    background-color: @danger7;
+  }
+
+  &:disabled {
+    background-color: @danger2;
+  }
+
+}
+.xly-button--secondary {
+  color: #333;
+  background-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+}
+.xly-button--small {
+  font-size: 12px;
+  padding: 2px 8px;
+}
+.xly-button--default {
+  font-size: 14px;
+  padding: 5px 16px;
+}
+.xly-button--large {
+  font-size: 16px;
+  padding: 8px 16px;
+}
