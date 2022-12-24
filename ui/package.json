@@ -11,7 +11,8 @@
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -o ../docs"
+    "build-storybook": "build-storybook -o ../docs",
+    "start":"npm run storybook"
   },
   "dependencies": {
     "vue": "^3.2.41"

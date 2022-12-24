@@ -12,7 +12,10 @@ module.exports = {
     docsPage: "automatic"
   },
   async viteFinal(config) {
-    config.build.assetsDir = "cool-ui/assets"
+    console.log(process.env.NODE_ENV);
+    if(process.env.NODE_ENV !== 'development'){
+      config.build.assetsDir = "cool-ui/assets"
+    };
     return config
   }
 };
