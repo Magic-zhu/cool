@@ -1,5 +1,11 @@
 <template>
-  <button type="button" :class="classes" @click="onClick" :style="style">
+  <button
+    type="button"
+    :class="classes"
+    @click="onClick"
+    :style="style"
+    :disabled="disabled"
+  >
     {{ label }}
   </button>
 </template>
@@ -34,9 +40,13 @@ export default {
       type: Boolean,
       default: false,
     },
+    cool: {
+      type: Boolean,
+      default: false,
+    },
     size: {
       type: String,
-      validator: function (value:string) {
+      validator: function (value: string) {
         return ["small", "default", "large"].indexOf(value) !== -1
       },
     },
@@ -51,13 +61,13 @@ export default {
     props = reactive(props)
     return {
       classes: computed(() => ({
-        "xly-button": true,
-        "xly-button--primary": props.primary,
-        "xly-button--success": props.success,
-        "xly-button--warning": props.warning,
-        "xly-button--danger": props.danger,
-        "xly-button--disabled": props.disabled,
-        [`xly-button--${props.size || "default"}`]: true,
+        [`${props.cool ? "cool" : "xly"}-button`]: true,
+        [`${props.cool ? "cool" : "xly"}-button--primary`]: props.primary,
+        [`${props.cool ? "cool" : "xly"}-button--success`]: props.success,
+        [`${props.cool ? "cool" : "xly"}-button--warning`]: props.warning,
+        [`${props.cool ? "cool" : "xly"}-button--danger`]: props.danger,
+        [`${props.cool ? "cool" : "xly"}-button--${props.size || "default"}`]:
+          true,
       })),
       style: computed(() => ({
         backgroundColor: props.backgroundColor,

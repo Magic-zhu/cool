@@ -1,4 +1,5 @@
 @import "../style/global.less";
+
 .xly-button {
   border: none;
   display: flex;
@@ -16,7 +17,7 @@
     background-color: @divide;
   }
   &:disabled {
-    color:@disableText;
+    color: @disableText;
   }
 }
 .xly-button--primary {
@@ -34,7 +35,6 @@
   &:disabled {
     background-color: @primary2;
   }
-
 }
 .xly-button--success {
   color: @white;
@@ -51,7 +51,22 @@
   &:disabled {
     background-color: @success2;
   }
+}
+.xly-button--warning {
+  color: @white;
+  background-color: @warning6;
 
+  &:hover {
+    background-color: @warning5;
+  }
+
+  &:active {
+    background-color: @warning7;
+  }
+
+  &:disabled {
+    background-color: @warning2;
+  }
 }
 .xly-button--danger {
   color: @white;
@@ -68,7 +83,6 @@
   &:disabled {
     background-color: @danger2;
   }
-
 }
 .xly-button--secondary {
   color: #333;
@@ -84,6 +98,110 @@
   padding: 5px 16px;
 }
 .xly-button--large {
+  font-size: 16px;
+  padding: 8px 16px;
+}
+
+.cool-button {
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 16px;
+  gap: 8px;
+  color: @cool-white;
+  background-color: @cool-secondary;
+  border-radius: 4px;
+  &:hover {
+    background-color: @cool-hover;
+  }
+  &:active {
+    background-color: @cool-light-black;
+  }
+  &:disabled {
+    color: @disableText;
+    cursor: not-allowed;
+  }
+}
+.cool-button--primary {
+  color: @white;
+  background-color: @cool-primary;
+
+  &:hover {
+    background-color: @cool-primary-hover;
+  }
+
+  &:active {
+    background-color: @cool-primary-press;
+  }
+
+  &:disabled {
+    background-color: @primary2;
+    cursor: not-allowed;
+  }
+}
+.cool-button--success {
+  color: @white;
+  background-color: @success6;
+
+  &:hover {
+    background-color: @success5;
+  }
+
+  &:active {
+    background-color: @success7;
+  }
+
+  &:disabled {
+    background-color: @success2;
+    cursor: not-allowed;
+  }
+}
+.cool-button--warning {
+  color: @white;
+  background-color: @warning6;
+
+  &:hover {
+    background-color: @warning5;
+  }
+
+  &:active {
+    background-color: @warning7;
+  }
+
+  &:disabled {
+    background-color: @warning2;
+    cursor: not-allowed;
+  }
+}
+.cool-button--danger {
+  color: @white;
+  background-color: @danger6;
+
+  &:hover {
+    background-color: @danger5;
+  }
+
+  &:active {
+    background-color: @danger7;
+  }
+
+  &:disabled {
+    background-color: @danger2;
+    cursor: not-allowed;
+  }
+}
+
+.cool-button--small {
+  font-size: 12px;
+  padding: 3px 8px;
+}
+.cool-button--default {
+  font-size: 14px;
+  padding: 3px 16px;
+}
+.cool-button--large {
   font-size: 16px;
   padding: 8px 16px;
 }
