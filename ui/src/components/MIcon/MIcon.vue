@@ -51,6 +51,40 @@
         p-id="40507"
       ></path>
     </svg>
+    <svg
+      v-if="type === 'check_square_fill'"
+      t="1672666996539"
+      class="icon"
+      viewBox="0 0 1024 1024"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      p-id="8393"
+      width="200"
+      height="200"
+    >
+      <path
+        d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zM695.5 365.7l-210.6 292c-12.7 17.7-39 17.7-51.7 0L308.5 484.9c-3.8-5.3 0-12.7 6.5-12.7h46.9c10.2 0 19.9 4.9 25.9 13.3l71.2 98.8 157.2-218c6-8.3 15.6-13.3 25.9-13.3H689c6.5 0 10.3 7.4 6.5 12.7z"
+        p-id="8394"
+        :fill="color"
+      ></path>
+    </svg>
+    <svg
+      t="1672668723704"
+      v-if="type === 'checked'"
+      class="icon"
+      viewBox="0 0 1024 1024"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      p-id="9547"
+      width="200"
+      height="200"
+    >
+      <path
+        d="M417.185185 768c-9.481481 0-18.962963-3.792593-26.548148-11.377778l-246.518518-246.518518c-15.17037-15.17037-15.17037-37.925926 0-53.096297 15.17037-15.17037 37.925926-15.17037 53.096296 0L417.185185 676.977778l409.6-409.6c15.17037-15.17037 37.925926-15.17037 53.096296 0 15.17037 15.17037 15.17037 37.925926 0 53.096296l-436.148148 436.148148c-7.585185 7.585185-17.066667 11.377778-26.548148 11.377778z"
+        :fill="color"
+        p-id="9548"
+      ></path>
+    </svg>
   </div>
 </template>
 <script lang="ts">
@@ -58,7 +92,9 @@ import { defineComponent, computed, reactive } from "vue"
 export enum IconType {
   START = "start",
   PAUSE = "pause",
-  prompt = "prompt",
+  PROMPT = "prompt",
+  CHECK_SQUARE_FILL = "check_square_fill",
+  CHECKED = "checked",
 }
 export default defineComponent({
   props: {
