@@ -1,0 +1,46 @@
+@x: #c31f2a;
+@y: #33b236;
+@z: #1d40c4;
+.attribute-transform {
+  font-size: 12px;
+  width: 100%;
+  .attribute {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    .attribute-label {
+      display: flex;
+      align-items: center;
+      width: 120px;
+      padding-left: 20px;
+    }
+    .attribute-body {
+      display: flex;
+      .attribute-body-item {
+        display: flex;
+        align-items: center;
+      }
+      .base {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        box-sizing: border-box;
+      }
+      .x {
+        .base();
+        background-color: @x;
+      }
+      .y {
+        .base();
+        background-color: @y;
+      }
+      .z {
+        .base();
+        background-color: @z;
+      }
+    }
+  }
+}
