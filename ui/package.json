@@ -1,7 +1,7 @@
 {
   "name": "dark-ui",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.5",
   "type": "module",
   "main": "dist/lib.umd.js",
   "module": "dist/lib.es.js",
@@ -39,5 +39,8 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "engines": {
+    "node": "16.14.2"
+  }
 }

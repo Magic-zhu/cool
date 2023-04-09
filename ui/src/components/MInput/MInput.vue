@@ -12,7 +12,7 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, computed, reactive, ref, watch } from "vue";
+import { defineComponent, computed, reactive, ref, watch } from "vue"
 export default defineComponent({
   name: "MInput",
   props: {
@@ -23,7 +23,7 @@ export default defineComponent({
       type: String,
     },
     value: {
-      type: [String, Boolean],
+      type: [String, Boolean, Number],
     },
     disabled: {
       type: Boolean,
@@ -34,20 +34,20 @@ export default defineComponent({
     },
   },
   setup(props, { emit }) {
-    props = reactive(props);
-    let inputValue: any;
+    props = reactive(props)
+    let inputValue: any
     if (props.type === "text") {
-      inputValue = ref(props.value);
+      inputValue = ref(props.value)
     } else {
-      inputValue = ref(props.value);
+      inputValue = ref(props.value)
     }
     watch(
       () => props.value,
       (newVal: any) => {
-        if (newVal === undefined) return;
-        inputValue.value = newVal.toString();
+        if (newVal === undefined) return
+        inputValue.value = newVal.toString()
       }
-    );
+    )
     return {
       inputType: props.type,
       styles: computed(() => ({
@@ -56,14 +56,14 @@ export default defineComponent({
       })),
       inputValue,
       onInput() {
-        emit("input", inputValue.value);
+        emit("onInput", inputValue.value)
       },
       onChange() {
-        emit("change", inputValue.value);
+        emit("onChange", inputValue.value)
       },
-    };
+    }
   },
-});
+})
 </script>
 <style lang="less" scoped>
 @import "./MInput.less";

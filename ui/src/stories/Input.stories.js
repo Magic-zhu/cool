@@ -4,11 +4,11 @@ export default {
   title: "CoolBlack/Input",
   component: MInput,
   argTypes: {
-    type:{
-        control: { type: 'select' },
-        options: ['text', 'checkbox'],
+    type: {
+      control: { type: 'select' },
+      options: ['text', 'checkbox'],
     },
-    onInput:{}
+    onOnInput: {}
   },
 };
 
@@ -25,5 +25,5 @@ const Template = (args) => ({
 
 export const InputText = Template.bind({});
 InputText.args = {
-    value:"测试输入框"
+  value: "测试输入框"
 };
